@@ -1,11 +1,72 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&amp;display=swap"
+    rel="stylesheet"
+  />
+  <title>The movie</title>
+  <script type="module" crossorigin="" src="/assets/index-d3b8b63a.js"></script> 
+  <link rel="stylesheet" href="/dist/output.css" />
+</head>
+<body>
+  <div id="root">
+    <div>
+      <div
+        class="container sm:mx-auto ml-4 sm:mt-4 mt-10 flex flex-row justify-between"
+      >
+        <div>
+          <p class="text-3xl font-poppins font-bold">The</p>
+          <p class="text-3xl font-poppins font-bold">Movie</p>
+          <p class="text-3xl font-poppins font-bold">Watchlist</p>
+        </div>
+        <div class="w-6/12 my-auto flex flex-row-reverse">
+          <input
+            type="text"
+            placeholder="🔎 search a movie or a series"
+            class="hidden sm:block w-full bg-slate-200 px-3 py-3 rounded-full text-center"
+          /><input
+            type="text"
+            placeholder="🔎"
+            class="sm:hidden w-12 h-12 bg-slate-200 px-3 py-3 rounded-full text-center"
+          />
+        </div>
+        <div class="my-auto flex justify-center">
+          <button
+            class="hidden sm:flex rounded-full bg-slate-200 px-10 py-3 text-black flex-nowrap"
+          >
+            <span class="mr-2">📕</span><span> Watchlist</span></button
+          ><button
+            class="sm:hidden rounded-full mr-10 w-12 h-12 bg-slate-200 text-black"
+          >
+            📕
+          </button>
+        </div>
+      </div>
+      <div
+        class="container flex flex-wrap justify-start mx-auto mt-10 w-full px-3"
+      >
+        <div class="min-w-[50%]">
+          <h1 class="font-poppins font-bold">Currently Watching</h1>
+          <div class="flex mt-8"></div>
+        </div>
+        <div class="min-w-[50%]">
+          <h1 class="font-poppins font-bold mt-8 sm:mt-0">
+            Suggested To Watch
+          </h1>
+          <div class="flex mt-8"></div>
+        </div>
+      </div>
+      <div class="container flex mx-auto my-10 w-full px-3">
+        <div>
+          <h1 class="font-poppins font-bold mb-10">Previously Watched</h1>
+          <div class="flex flex-wrap"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
