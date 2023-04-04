@@ -17,7 +17,7 @@
           <form>
             <label for="username"></label>
             <input
-              class="text-xl w-full font-poppins py-2 rounded-lg bg-slate-100 my-2"
+              class="text-lg py-3 w-full font-poppins rounded-lg bg-slate-100 placeholder:text-black"
               type="text"
               name="username"
               id="username"
@@ -26,16 +26,24 @@
             /><br />
             <label for="password"></label>
             <input
-              class="text-xl w-full font-poppins py-2 rounded-lg bg-slate-100 my-2"
+              class="text-lg w-full font-poppins py-3 rounded-lg bg-slate-100 my-2 placeholder:text-black"
               type="password"
               name="password"
               id="password"
               placeholder="Password"
               required
             />
+            <label for="confirm-password"></label>
+            <input
+              class="text-xs w-full font-poppins rounded-lg bg-slate-100 placeholder:text-black invisible"
+              type="password"
+              name="password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+            />
             <button
               type="submit"
-              class="text-xl w-full rounded-lg my-2 bg-cyan-400 text-white font-semibold flex justify-center"
+              class="text-lg w-full rounded-lg py-2 my-1 bg-cyan-400 text-white font-semibold flex justify-center"
             >
               Login
             </button>

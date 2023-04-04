@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/register.css" />
+    <title>Movie Watchlist's Register</title>
+  </head>
+  <body>
+    <div class="flex items-center justify-center h-screen">
+      <div class="container max-w-sm px-4">
+        <p class="text-5xl font-poppins font-bold py-2">The</p>
+        <p class="text-5xl font-poppins font-bold py-2">Movie</p>
+        <p class="text-5xl font-poppins font-bold py-2">Watchlist</p>
+        <div class="flex">
+          <form>
+            <label for="username"></label>
+            <input
+              class="text-lg w-full font-poppins py-3 rounded-lg bg-slate-100 my-2 placeholder:text-black"
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+              required
+            /><br />
+            <label for="email"></label>
+            <input
+              class="text-lg w-full font-poppins py-3 rounded-lg bg-slate-100 my-2 placeholder:text-black"
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            /><br />
+            <label for="password"></label>
+            <input
+              class="text-lg w-full font-poppins py-3 rounded-lg bg-slate-100 my-2 placeholder:text-black"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <label for="confirm-password"></label>
+            <input
+              class="text-lg w-full font-poppins py-3 rounded-lg bg-slate-100 my-2 placeholder:text-black"
+              type="password"
+              name="password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+              required
+            />
+            <button
+              type="submit"
+              class="text-lg w-full rounded-lg py-2 my-1 bg-cyan-400 text-white font-semibold flex justify-center"
+            >
+              Register
+            </button>
+          </form>
+        </div>
+        <p class="text-sm font-medium">
+          Already have an account?
+          <strong><a href="./login.html">Login</a></strong>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
