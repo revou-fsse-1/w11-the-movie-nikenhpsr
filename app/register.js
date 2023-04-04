@@ -29,7 +29,7 @@ form.addEventListener('submit', function(event) {
     message.innerHTML = "Successfully registered. Redirecting to login page...";
     message.style.color = "green";
     setTimeout(function() {
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     }, 2000);
   }, 2000);
 });
