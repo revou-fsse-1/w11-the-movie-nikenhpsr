@@ -14,22 +14,22 @@
         <p class="text-5xl font-poppins font-bold py-2">Movie</p>
         <p class="text-5xl font-poppins font-bold py-2">Watchlist</p>
         <div class="flex">
-          <form>
-            <label for="username"></label>
+          <form id="login-form">
+            <label for="username-input"></label>
             <input
               class="text-lg py-3 w-full font-poppins rounded-lg bg-slate-100 placeholder:text-black"
               type="text"
               name="username"
-              id="username"
+              id="username-input"
               placeholder="Username"
               required
             /><br />
-            <label for="password"></label>
+            <label for="password-input"></label>
             <input
               class="text-lg w-full font-poppins py-3 rounded-lg bg-slate-100 my-2 placeholder:text-black"
               type="password"
               name="password"
-              id="password"
+              id="password-input"
               placeholder="Password"
               required
             />
@@ -41,6 +41,7 @@
               id="confirm-password"
               placeholder="Confirm Password"
             />
+            <div id="message"></div>
             <button
               type="submit"
               class="text-lg w-full rounded-lg py-2 my-1 bg-cyan-400 text-white font-semibold flex justify-center"
@@ -55,5 +56,6 @@
         </p>
       </div>
     </div>
+    <script src="../app/login.js"></script>
   </body>
 </html>
