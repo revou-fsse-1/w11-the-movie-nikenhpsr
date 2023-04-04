@@ -8,34 +8,44 @@
     <title>Movie Watchlist's Login</title>
   </head>
   <body>
-    <div class="container max-w-sm px-4 mt-28">
-      <p class="text-3xl font-poppins font-bold py-1">The</p>
-      <p class="text-3xl font-poppins font-bold py-1">Movie</p>
-      <p class="text-3xl font-poppins font-bold py-1">Watchlist</p>
-      <form>
-        <label for="username"></label>
-        <input
-          class="font-poppins py-2 w-auto rounded-lg bg-slate-100 my-2"
-          type="text"
-          name="username"
-          id="username"
-          placeholder="Username"
-          required
-        /><br />
-        <label for="password"></label>
-        <input
-          class="font-poppins py-2 w-auto rounded-lg bg-slate-100 my-2"
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Password"
-          required
-        />
-      </form>
-      <button type="submit" class="rounded-lg bg-blue-300 text-white font-semibold flex justify-center w-24">Login</button>
-      <p>
-        You don't have an account? <em><a href="./register.html">SignUp</a></em>
-      </p>
+    <div class="flex items-center justify-center h-screen">
+      <div class="container max-w-sm px-4">
+        <p class="text-5xl font-poppins font-bold py-2">The</p>
+        <p class="text-5xl font-poppins font-bold py-2">Movie</p>
+        <p class="text-5xl font-poppins font-bold py-2">Watchlist</p>
+        <div class="flex">
+          <form>
+            <label for="username"></label>
+            <input
+              class="text-xl w-full font-poppins py-2 rounded-lg bg-slate-100 my-2"
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+              required
+            /><br />
+            <label for="password"></label>
+            <input
+              class="text-xl w-full font-poppins py-2 rounded-lg bg-slate-100 my-2"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <button
+              type="submit"
+              class="text-xl w-full rounded-lg my-2 bg-cyan-400 text-white font-semibold flex justify-center"
+            >
+              Login
+            </button>
+          </form>
+        </div>
+        <p class="text-sm font-medium">
+          You don't have an account?
+          <strong><a href="./register.html">SignUp</a></strong>
+        </p>
+      </div>
     </div>
   </body>
 </html>
