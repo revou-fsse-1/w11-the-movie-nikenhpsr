@@ -9,7 +9,7 @@
     rel="stylesheet"
   />
   <title>The movie</title>
-  <link rel="stylesheet" href="/dist/output.css" />
+  <link rel="stylesheet" href="../dist/description.css" />
 </head>
 <body>
   <div id="root">
@@ -48,25 +48,12 @@
       <div
       class="container flex flex-wrap justify-start mx-auto mt-10 w-full px-3"
       >
-        <div class="min-w-[50%]" id="current-watch-container">
-          <h1 class="font-poppins font-bold">Currently Watching</h1>
-          <div class="flex mt-8 w-[100%] object-cover h-[235px] rounded-[20px] space-x-1 text-lg font-bold text-center" id="current-watch"></div>
-        </div>
-        <div class="min-w-[50%]" id="suggested-container">
-          <h1 class="font-poppins font-bold mt-8 sm:mt-0">
-            Suggested To Watch
-          </h1>
-          <div class="flex mt-8 w-[100%] object-cover h-[235px] rounded-[20px] space-x-1 text-lg font-bold text-center" id="suggested"></div>
-        </div>
-      </div>
-      <div class="container flex mx-auto my-10 w-full px-3">
-        <div id="previously-watched-container">
-          <h1 class="font-poppins font-bold mb-10">Previously Watched</h1>
-          <div class="flex flex-wrap mt-8 w-[100%] object-cover h-[235px] rounded-[20px] space-x-1 text-lg font-bold text-center" id="previously-watched"></div>
+        <div class="min-w-[50%]" id="description">
+          <h1 class="font-poppins font-bold text-4xl"></h1>
         </div>
       </div>
     </div>
   </div>
-  <script src="../app/main.js"></script> 
+  <script src="../app/desc.js"></script> 
 </body>
 </html>

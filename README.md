@@ -11,12 +11,15 @@ Day 2:
 - Register page structure & UI ✅
 - Interacting Login & Register page with JS DOM & Local Storage ✅
 
-## Todo
-
 Day 3:
 
-- Implementing CRUD API into Web Application (homepage)
-- Creating documentation API using Postman
+- Homepage content layout using different API endpoint ✅
+- Link homepage to description page ✅
+
+## Todo
+
 
 Day 4:
-- Add watchlist structure & UI
+- Description page content depend on what you click on homepage
+- Add CRUD for **Add to Watch List** button
+- Documentation on Postman API
