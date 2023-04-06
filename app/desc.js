@@ -1,15 +1,24 @@
-const url = `http://localhost:3000/movies/${id}`;
-const descriptionContainer = document.getElementById("description");
+const urlParams = new URLSearchParams(window.location.search);
+const movieId = urlParams.get("id");
 
-fetch(url).then((response) => response.json()),
-  then((desc) => {
-    descriptionContainer.innerHTML = `
-            <div>
-              <h1>${movie.title}</h1>
-              <img src="${movie.image}" alt="${movie.title}" />
-              <iframe width="560" height="315" src="${movie.trailer}" title="${movie.title}" frameborder="0" allowfullscreen></iframe>
-              <p>Genre: ${movie.genre}</p>
-              <p>${movie.synopsis}</p>
-            </div>
-          `;
+const movieTitle = document.getElementById("movie-title");
+const movieImage = document.getElementById('movieImage');
+const movieGenre = document.getElementById('movieGenres');
+const movieSynopsis = document.getElementById('movieSynopsis');
+const movieTrailer = document.getElementById('movieTrailer');
+
+// Make a request to get movie details from the API
+fetch(`http://localhost:3000/movies/${movieId}`)
+  .then((response) => response.json())
+  .then((movie) => {
+    // Update the movie title in the page with the fetched data
+    movieTitle.textContent = movie.title;
+    movieImage.src = movie.image;
+    movieGenre.innerText = movie.genre;
+    movieSynopsis.innerText = movie.synopsis;
+    movieTrailer.src = movie.trailer;
+  })
+  .catch((error) => {
+    console.error(error);
+    movieTitle.textContent = "Error fetching movie details";
   });

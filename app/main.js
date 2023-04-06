@@ -10,14 +10,13 @@ fetch(url)
   .then((data) => {
     data.forEach((movie) => {
       previouslyWatched.innerHTML += `
-        <a
-          class="min-w-[155px] min-h-[235px] max-w-[155px] rounded-[20px] relative overflow-hidden"
-          >
-          <img
-          class="w-[100%] object-cover h-[235px] rounded-[20px]"
-          src="${movie.image}"
-          alt="${movie.title}"
-          onclick="goToMovieDetail(${movie.id})"
+        <a "class="min-w-[155px] min-h-[235px] max-w-[155px] rounded-[20px] relative overflow-hidden"
+        onclick="goToMovieDetail(${movie.id})"
+        >
+        <img
+        class="w-[100%] object-cover h-[235px] rounded-[20px]"
+        src="${movie.image}"
+        alt="${movie.title}"
           />
           <p
             id="${movie.id}"
@@ -37,12 +36,12 @@ fetch("http://localhost:3000/currentWatch")
       currentWatch.innerHTML += `
       <a
         class="min-w-[155px] min-h-[235px] max-w-[155px] rounded-[20px] relative overflow-hidden"
+        onclick="goToMovieDetail(${movie.id})"
       >
         <img
           class="w-[100%] object-cover h-[235px] rounded-[20px]"
           src="${movie.image}"
           alt="${movie.title}"
-          onclick="goToMovieDetail(${movie.id})"
         />
         <p
           id="${movie.id}"
@@ -64,14 +63,13 @@ fetch("http://localhost:3000/isSuggested")
     data.forEach((movie) => {
       suggestedToWatch.innerHTML += `
         <a
-          class="min-w-[155px] min-h-[235px] max-w-[155px] rounded-[20px] relative overflow-hidden"
-          href="../src/description.html"
+        class="min-w-[155px] min-h-[235px] max-w-[155px] rounded-[20px] relative overflow-hidden"
+        onclick="goToMovieDetail(${movie.id})"
         >
           <img
             class="w-[100%] object-cover h-[235px] rounded-[20px]"
             src="${movie.image}"
             alt="${movie.title}"
-            onclick="goToMovieDetail(${movie.id})"
           />
           <p
             id="${movie.id}"
@@ -87,8 +85,9 @@ function goToMovieDetail(id) {
   // Send a GET request to the API endpoint to get the details of the selected movie
   fetch(`http://localhost:3000/movies/${id}`)
     .then((response) => response.json())
-    .then(() => {
-      window.location.href = "../src/description.html";
+    .then((movie) => {
+      // Pass the movie object to the next page
+      window.location.href = `../src/description.html?id=${movie.id}`;
     })
     .catch((error) => console.log(error));
 }
