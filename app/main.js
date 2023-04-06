@@ -21,7 +21,7 @@ fetch(url)
           <p
             id="${movie.id}"
           >
-          ⭐ ${movie.imdb_rating}
+          ⭐ ${movie.rating}
           </p>
         </a>`;
     });

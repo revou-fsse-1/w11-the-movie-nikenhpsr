@@ -35,35 +35,40 @@
           >
             <span class="mr-2">📕</span><span> Watchlist</span>
           </button>
-          <button
-            class="sm:hidden rounded-full mr-10 w-12 h-12 bg-slate-200 text-black"
-          >
-            📕
-          </button>
-        </div>
-        <div class="my-auto flex justify-center">
-          <button
-            class="hidden sm:flex rounded-full bg-slate-200 px-10 py-3 text-black flex-nowrap"
-            id="watchlist-button"
-          >
-            <span class="mr-2">📕</span><span> Add to Watchlist</span>
-          </button>
-          <button
-            class="sm:hidden rounded-full mr-10 w-12 h-12 bg-slate-200 text-black"
-          >
-            📕
-          </button>
         </div>
       </div>
       <div
-        class="container flex flex-wrap justify-start mx-auto mt-10 w-full px-3"
+        class="container mx-auto mt-10 w-full px-3"
       >
-        <div class="min-w-[50%]" id="movieDetails">
+        <div class="flex justify-between" id="title-button-container">
           <h1 class="font-bold text-4xl" id="movie-title"></h1>
-          <div id="movieGenres"></div>
-          <img src="" alt="" id="movieImage" />
-          <div id="movieSynopsis"></div>
+          <div class="my-auto">
+            <button
+              class="hidden sm:flex rounded-full bg-slate-200 px-10 py-2 text-black flex-nowrap"
+              id="add-watchlist"
+            >
+              <span class="mr-2"
+                ><img
+                  src="https://img.icons8.com/material/24/null/bookmark-outline.png" /></span
+              ><span> Add to Watchlist</span>
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-evenly gap-3" id="movieDetails">
+          <img
+            src=""
+            alt=""
+            id="movieImage"
+            class="max-h-[291px] max-w-[196px] rounded-[20px] relative overflow-hidden mt-6 ml-0"
+          />
+          <div class="gap-1" id="details-container">
+            <div class="mt-6 mb-6" id="movieGenres"></div>
+            <!--need some styling-->
+            <p class="text-justify max-w-md" id="movieSynopsis"></p>
+            <p class="mt-6 mb-6" id="imdbRating"></p>
+          </div>
           <iframe
+            class="rounded-[10px] max-h-[291px] max-w-[521px] ml-10 mt-6"
             src=""
             id="movieTrailer"
             width="560"

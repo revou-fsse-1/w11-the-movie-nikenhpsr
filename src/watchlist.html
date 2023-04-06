@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&amp;display=swap"
+    rel="stylesheet"
+  />
+  <title>The movie</title>
+  <link rel="stylesheet" href="/dist/output.css" />
+</head>
+<body>
+  <div id="root">
+    <div>
+      <div
+      class="container sm:mx-auto ml-4 sm:mt-4 mt-10 flex flex-row justify-between"
+      >
+      <div>
+        <p class="text-3xl font-poppins font-bold">The</p>
+        <p class="text-3xl font-poppins font-bold">Movie</p>
+        <p class="text-3xl font-poppins font-bold">Watchlist</p>
+      </div>
+      <div class="w-6/12 my-auto flex flex-row-reverse">
+        <input
+        type="text"
+        placeholder="🔎 search a movie or a series"
+        class="hidden sm:block w-full bg-slate-200 px-3 py-3 rounded-full text-center"
+        /><input
+        type="text"
+        placeholder="🔎"
+        class="sm:hidden w-12 h-12 bg-slate-200 px-3 py-3 rounded-full text-center"
+        />
+      </div>
+      <div class="my-auto flex justify-center">
+        <button
+        class="hidden sm:flex rounded-full bg-slate-200 px-10 py-3 text-black flex-nowrap" id="watchlist-button"
+        >
+        <span class="mr-2">📕</span><span> Watchlist</span></button
+        ><button
+            class="sm:hidden rounded-full mr-10 w-12 h-12 bg-slate-200 text-black"
+          >
+            📕
+          </button>
+        </div>
+      </div>
+      <div
+      class="container flex flex-wrap justify-start mx-auto mt-10 w-full px-3"
+      >
+        <div class="min-w-[50%]" id="watchlist-container">
+          <div class="flex mt-8 w-[100%] object-cover h-[263px] rounded-[20px] space-x-1 text-lg font-bold text-center" id="current-watch"></div>
+        </div>
+    </div>
+  </div>
+  <script src="../app/main.js"></script> 
+</body>
+</html>
