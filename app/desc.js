@@ -30,14 +30,15 @@ fetch(`http://localhost:3000/movies/${movieId}`)
 
 // add to watchlist
   watchlistButton.addEventListener("click", function() {
-    const movieId = ""; // Replace with the ID of the movie you want to add to the watchlist
+    const urlParams = new URLSearchParams(window.location.search);
+    const movieId = urlParams.get("id"); // Replace with the ID of the movie you want to add to the watchlist
     const watchlistUrl = "http://localhost:3000/watchlist"; // Replace with the URL of the watchlist API
     const movieUrl = `http://localhost:3000/movies/${movieId}`; // Replace with the URL of the movie API
 
     fetch(movieUrl)
       .then(response => response.json())
       .then(movieData => {
-        const updatedMovieData = { ...movieData, onWatchlist: true };
+        const updatedMovieData = movie.onWatchlist = true;
         return fetch(watchlistUrl, {
           method: "POST",
           headers: { "Content-Type": "application/json" },

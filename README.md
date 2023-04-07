@@ -1,5 +1,10 @@
 # The Movie Watch List 
 
+## Links
+
+live preview: https://resilient-maamoul-b6955e.netlify.app/
+POSTMAN Docs: https://documenter.getpostman.com/view/26669025/2s93RZNqHD
+
 ## Daily Progress
 
 Day 1: 
